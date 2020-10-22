@@ -3,7 +3,7 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
-const multiConfig = require('../config/multi.conf') //æ·»åŠ é…ç½®å¤šæ¨¡å—
+const multiConfig = require('../config/multi.conf') //Ìí¼ÓÅäÖÃ¶àÄ£¿é
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -14,7 +14,7 @@ module.exports = {
   // entry: {
   //   app: './src/main.js'
   // },
-  entry: multiConfig.process.entry,//æ·»åŠ é…ç½®å¤šæ¨¡å—
+  entry: multiConfig.process.entry,//Ìí¼ÓÅäÖÃ¶àÄ£¿é
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -27,8 +27,8 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
-      '@': multiConfig.process.alias,////æ·»åŠ é…ç½®å¤šæ¨¡å—åˆ«å
-      ...multiConfig.moduleAlias////æ·»åŠ é…ç½®å¤šæ¨¡å—åˆ«å
+      '@': multiConfig.process.alias,////Ìí¼ÓÅäÖÃ¶àÄ£¿é±ğÃû
+      ...multiConfig.moduleAlias////Ìí¼ÓÅäÖÃ¶àÄ£¿é±ğÃû
     }
   },
   module: {
